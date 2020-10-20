@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply
+    .p-5
+  ;
+}
+
+body {
+  @apply
+    .antialiased
+  ;
+}
+
+h1,
+h2,
+h3 {
+  @apply
+    .font-bold
+  ;
+}
+
+.container {
+  max-width: 1140px;
+}
