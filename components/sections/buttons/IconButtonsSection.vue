@@ -4,12 +4,12 @@
       Give Icon Buttons an <code>aria-label</code> Attribute
     </h2>
     <p class="mb-4">
-      Since a <code>&lt;button&gt;</code> element always attempts to compute its accessible name using its text content, buttons that don't have text content need an <code>aria-label</code> attribute. The value of this attribute will provide an accessible name to assistive technology.
+      Since a <code>&lt;button&gt;</code> element always attempts to compute its accessible name using its text content, buttons that don't have text content need an <code>aria-label</code> attribute. The value of this attribute will provide an accessible name to assistive technologies.
     </p>
     <p>
       Icon buttons are a perfect example of buttons than need to be given an <code>aria-label</code> attribute.
     </p>
-    <div>
+    <div class="my-8">
       <h3 class="my-4">
         Button Without an <code>aria-label</code> Attribute
       </h3>
