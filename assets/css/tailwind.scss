@@ -2,7 +2,10 @@
 @tailwind components;
 
 // Custom Components
-@import "components/navigation.scss";
+@import 'components/code.scss';
+@import 'components/buttons.scss';
+@import 'components/headings.scss';
+@import 'components/navigation.scss';
 
 @tailwind utilities;
 
@@ -30,6 +33,14 @@ h2,
 h3 {
   @apply
     .font-bold
+  ;
+}
+
+code {
+  @apply
+    .px-1
+    .bg-gray-300
+    .rounded-sm
   ;
 }
 

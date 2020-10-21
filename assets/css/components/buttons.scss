@@ -1,0 +1,19 @@
+.icon-button {
+  @apply
+    .p-3
+    .border .border-gray-600
+    .rounded-md
+  ;
+
+  &:hover {
+    @apply
+      .bg-gray-200
+    ;
+  }
+
+  &:focus {
+    @apply
+      .outline-none .shadow-outline
+    ;
+  }
+}
