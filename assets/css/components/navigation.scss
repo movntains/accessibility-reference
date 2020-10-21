@@ -1,0 +1,46 @@
+.app-navigation__heading {
+  @apply
+    .px-2
+    .font-bold .text-xl .text-white
+    .rounded-sm
+  ;
+
+  &:focus {
+    @apply
+      .outline-none .shadow-outline
+    ;
+  }
+}
+
+.app-navigation__link {
+  @apply
+    .flex .items-center
+    .py-2 .px-2
+    .rounded-md
+    .font-medium .text-white
+    .leading-6
+    .transition .ease-in-out .duration-150
+  ;
+
+  &:hover {
+    @apply
+      .bg-gray-900
+    ;
+  }
+
+  &:focus {
+    @apply
+      .outline-none .shadow-outline
+      .bg-gray-900
+    ;
+  }
+
+  &.nuxt-link-exact-active {
+    @apply
+      .opacity-100
+      .bg-gray-900
+      .border .border-teal-700
+      .font-bold .text-teal-400
+    ;
+  }
+}
