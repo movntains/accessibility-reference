@@ -25,8 +25,23 @@
             <NuxtLink
               :to="{ name: link.to }"
               class="group app-navigation__link"
-              v-text="link.title"
-            />
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="w-4 h-4 mr-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+              <span v-text="link.title" />
+            </NuxtLink>
           </li>
         </ul>
       </nav>
