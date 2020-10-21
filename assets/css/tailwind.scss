@@ -1,5 +1,9 @@
 @tailwind base;
 @tailwind components;
+
+// Custom Components
+@import "components/navigation.scss";
+
 @tailwind utilities;
 
 #root {
@@ -12,6 +16,13 @@ body {
   @apply
     .antialiased
   ;
+
+  &:not(.using-keyboard) a:focus,
+  &:not(.using-keyboard) button:focus {
+    @apply
+      .outline-none .shadow-none
+    ;
+  }
 }
 
 h1,
