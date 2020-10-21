@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-col w-64 bg-gray-800">
+  <div
+    id="dashboard-desktop-nav"
+    class="flex flex-col w-64 bg-gray-800"
+  >
     <div class="flex-1 flex flex-col pb-4 overflow-y-auto">
       <div class="flex items-center flex-shrink-0 py-5 px-4 bg-gray-900">
         <NuxtLink
@@ -8,7 +11,10 @@
           v-text="'A11y Tips'"
         />
       </div>
-      <nav class="flex-1 mt-5 px-4 bg-gray-800 space-y-1">
+      <nav
+        id="desktop-nav-items"
+        class="flex-1 mt-5 px-4 bg-gray-800 space-y-1"
+      >
         <ul role="menu">
           <li
             v-for="link in links"

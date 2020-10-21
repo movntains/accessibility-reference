@@ -107,15 +107,56 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      listItems: [],
+    }
+  },
   computed: {
     ...mapState({
+      windowWidth: state => state.ui.windowWidth,
       mobileNavIsOpen: state => state.ui.mobileNavIsOpen,
     }),
+    focusableItems() {
+      return [
+        document.querySelector('body'),
+        document.getElementById('show-mobile-nav'),
+      ]
+    },
   },
   watch: {
     '$route'() {
       if (this.mobileNavIsOpen) {
         this.toggleMobileNav()
+
+        // Make background elements focusable again
+        this.$accessibility.setBackgroundElementFocus(0, this.focusableElements)
+      }
+    },
+    windowWidth(newVal, oldVal) {
+      if (newVal <= 768) {
+        this.setNavLinksFocus(-1)
+      } else {
+        this.setNavLinksFocus(0)
+      }
+    },
+    mobileNavIsOpen(newVal, oldVal) {
+      if (newVal) {
+        this.$nextTick(() => {
+          this.getListItems()
+
+          // Prevent elements outside of the mobile nav from being focusable while it's open
+          this.$accessibility.setBackgroundElementFocus(-1, this.focusableItems)
+
+          // Make nav links focusable while mobile nav is open
+          this.setNavLinksFocus(0)
+
+          // Focus the first nav link
+          this.listItems[0].focus()
+        })
+      } else {
+        this.$accessibility.setBackgroundElementFocus(0, this.focusableItems)
+        this.setNavLinksFocus(-1)
       }
     },
   },
@@ -123,6 +164,20 @@ export default {
     ...mapMutations({
       toggleMobileNav: 'ui/TOGGLE_MOBILE_NAV',
     }),
+    setNavLinksFocus(tabIndex) {
+      this.listItems.forEach((element) => {
+        element.setAttribute('tabindex', tabIndex)
+      })
+    },
+    getListItems() {
+      const ul = document.getElementById('dashboard-mobile-nav-list')
+
+      ul.querySelectorAll('li').forEach((item) => {
+        item.setAttribute('role', 'menuitem')
+      })
+
+      this.listItems = [...ul.querySelectorAll('li a')]
+    },
   },
 }
 </script>
