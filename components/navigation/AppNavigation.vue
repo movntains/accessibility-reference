@@ -32,14 +32,6 @@ export default {
           to: 'forms',
           title: 'Forms',
         },
-        {
-          to: 'images',
-          title: 'Images',
-        },
-        {
-          to: 'links',
-          title: 'Links',
-        },
       ],
     }
   },
