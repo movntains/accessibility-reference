@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen flex overflow-hidden bg-gray-100">
+  <div class="h-screen flex overflow-hidden bg-gray-50">
     <AppNavigation />
     <div class="flex flex-col flex-1 w-0 overflow-hidden">
       <AppMobileNavToggler />
