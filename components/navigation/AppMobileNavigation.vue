@@ -31,11 +31,11 @@
       >
         <div
           v-if="mobileNavIsOpen"
-          class="relative flex-1 flex flex-col max-w-xs w-full pb-4 bg-gray-800"
+          class="relative flex-1 flex flex-col max-w-xs w-full pb-4 bg-black"
         >
           <div class="absolute top-0 right-0 -mr-14 p-1">
             <button
-              class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-900 focus:shadow-outline"
+              class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-black focus:shadow-outline"
               aria-label="Close navigation"
               @click="toggleMobileNav"
               @keydown.enter.prevent="toggleMobileNav"
@@ -57,12 +57,17 @@
           </div>
           <div class="flex-1 h-0 overflow-y-auto">
             <nav>
-              <div class="flex items-center flex-shrink-0 py-5 px-4 bg-gray-900">
+              <div class="flex items-center flex-shrink-0 py-5 px-4">
                 <NuxtLink
                   :to="{ name: 'index' }"
                   class="app-navigation__heading"
-                  v-text="'A11y Tips'"
-                />
+                >
+                  <SvgLogo />
+                  <span
+                    class="ml-3 mb-1 text-gray-200"
+                    v-text="'A11y Tips'"
+                  />
+                </NuxtLink>
               </div>
               <ul
                 id="dashboard-mobile-nav-list"
@@ -78,23 +83,8 @@
                   <NuxtLink
                     :to="{ name: link.to }"
                     class="group app-navigation__link"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      class="w-4 h-4 mr-4"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
-                    <span v-text="link.title" />
-                  </NuxtLink>
+                    v-text="link.title"
+                  />
                 </li>
               </ul>
             </nav>
@@ -113,9 +103,13 @@
 
 <script type="text/babel">
 import { mapState, mapMutations } from 'vuex'
+import SvgLogo from '@/components/svg/SvgLogo'
 
 export default {
   name: 'AppMobileNavigation',
+  components: {
+    SvgLogo,
+  },
   props: {
     links: {
       type: Array,
