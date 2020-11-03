@@ -35,12 +35,11 @@
   }
 
   &.nuxt-link-exact-active {
-    color: #000000;
+    background-color: #050505;
 
     @apply
       .opacity-100
-      .bg-brand-green-dark
-      .font-bold
+      .font-bold .text-brand-green-dark
     ;
   }
 }
