@@ -35,6 +35,15 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        black: '#282B2C',
+        'brand-blue': '#141dcf',
+        'brand-green': '#25e8ca',
+        'brand-green-dark': '#538579',
+        'grey-light': '#EAEDEE',
+        'grey-extra-light': '#F8F9FB',
+        'grey-dark': '#323539',
+      },
     },
   },
   variants: {},
