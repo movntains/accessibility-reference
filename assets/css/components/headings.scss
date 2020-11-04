@@ -1,13 +1,22 @@
 .page-heading {
   @apply
-    .mb-4
-    .text-4xl .text-gray-900
+    .mb-8
+    .pb-2
+    .border-b-2 .border-brand-blue
+    .text-4xl .text-brand-blue
   ;
 }
 
 .page-subheading {
   @apply
-    .mb-2
-    .text-2xl .text-gray-800
+    .mb-4
+    .text-2xl .text-black
+  ;
+}
+
+.page-tertiary-heading {
+  @apply
+    .mb-4
+    .text-lg .text-gray-800
   ;
 }

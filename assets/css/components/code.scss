@@ -1,14 +1,16 @@
-.code-block {
-  @apply
-    .mt-2 .ml-0
-    .p-2
-    .rounded-sm
-    .shadow-inner
-  ;
+.prism-block {
+  font-family: Fira Code, Fira Mono, Consolas, Menlo, Courier, monospace;
 
-  @screen sm {
-    @apply
-      .mt-0 .ml-4
-    ;
-  }
+  @apply
+    .p-4
+    .bg-black
+    .rounded-md
+    .text-gray-300 .text-sm
+  ;
+}
+
+.prism-editor__textarea:focus {
+  @apply
+    .outline-none
+  ;
 }

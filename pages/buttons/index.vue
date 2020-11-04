@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-900">
+  <div class="container mb-10 text-gray-600">
     <h1
       class="page-heading"
       v-text="'Button Tips'"
@@ -9,6 +9,7 @@
 </template>
 
 <script type="text/babel">
+import CodeBlockMixin from '@/mixins/CodeBlockMixin'
 import IconButtonsSection from '@/components/sections/buttons/IconButtonsSection'
 
 export default {
@@ -16,5 +17,6 @@ export default {
   components: {
     IconButtonsSection,
   },
+  mixins: [CodeBlockMixin],
 }
 </script>

@@ -25,6 +25,10 @@ export default {
     return {
       navLinks: [
         {
+          to: 'blogs',
+          title: 'Blog List',
+        },
+        {
           to: 'buttons',
           title: 'Buttons',
         },

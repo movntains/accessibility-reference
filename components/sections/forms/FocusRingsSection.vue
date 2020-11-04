@@ -11,11 +11,11 @@
     <p v-text="`It's also possible to use JavaScript to hide focus rings when the user is using a mouse or trackpad, but display them when the user is using the keyboard.`" />
     <div class="my-8">
       <h3
-        class="my-4"
-        v-text="'Forms Elements Without Focus Rings'"
+        class="page-tertiary-heading"
+        v-text="'Inaccessible: Form Elements Without Focus Rings'"
       />
-      <div class="flex flex-col sm:flex-row items-center">
-        <div class="flex flex-col">
+      <div class="grid grid-cols-6 gap-2 items-center">
+        <div class="col-span-6 sm:col-span-3">
           <div class="flex flex-col mb-4">
             <label
               for="username"
@@ -25,53 +25,55 @@
             <input
               id="username"
               type="text"
-              class="p-2 rounded-sm bg-white focus:outline-none"
+              class="p-2 rounded-sm bg-white border border-gray-200 focus:outline-none"
             >
           </div>
           <div class="flex flex-col">
             <label
               for="password"
+              class="font-medium"
               v-text="'Password'"
             />
             <input
               id="password"
               type="password"
-              class="p-2 rounded-sm bg-white focus:outline-none"
+              class="p-2 rounded-sm bg-white border border-gray-200 focus:outline-none"
             >
           </div>
         </div>
       </div>
       <p
         class="mt-4"
-        v-text="`With focus rings, the only way to tell which of these form elements is currently focused is to look for the cursor.`"
+        v-text="`Without focus rings, the only way to tell which of these form elements is currently focused is to look for the cursor.`"
       />
     </div>
     <div class="my-8">
       <h3
-        class="my-4"
-        v-text="'Forms Elements with Focus Rings'"
+        class="page-tertiary-heading"
+        v-text="'Accessible: Form Elements with Focus Rings'"
       />
-      <div class="flex flex-col sm:flex-row items-center">
-        <div class="flex flex-col">
+      <div class="grid grid-cols-6 gap-2 items-center">
+        <div class="col-span-6 sm:col-span-3">
           <div class="flex flex-col mb-4">
             <label
-              for="username"
+              for="username_accessible"
               class="font-medium"
               v-text="'Username'"
             />
             <input
-              id="username"
+              id="username_accessible"
               type="text"
               class="form-input bg-white"
             >
           </div>
           <div class="flex flex-col">
             <label
-              for="password"
+              for="password_accessible"
+              class="font-medium"
               v-text="'Password'"
             />
             <input
-              id="password"
+              id="password_accessible"
               type="password"
               class="form-input bg-white"
             >

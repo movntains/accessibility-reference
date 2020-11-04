@@ -10,47 +10,45 @@
       Icon buttons are a perfect example of buttons than need to be given an <code>aria-label</code> attribute.
     </p>
     <div class="my-8">
-      <h3 class="my-4">
-        Button Without an <code>aria-label</code> Attribute
+      <h3 class="page-tertiary-heading">
+        Inaccessible: Button Without an <code>aria-label</code> Attribute
       </h3>
-      <div class="flex flex-col sm:flex-row items-center">
-        <button
-          type="button"
-          class="icon-button"
-        >
-          <SvgDownloadFile />
-        </button>
-        <code class="code-block">
-          <span>&lt;button type="button"&gt;</span>
-          <br>
-          <span class="ml-3">&lt;svg /&gt;</span>
-          <br>
-          <span>&lt;/button&gt;</span>
-        </code>
+      <div class="grid grid-cols-6 gap-2 justify-items-center sm:justify-items-start items-center">
+        <div class="col-span-6 sm:col-span-1">
+          <button
+            type="button"
+            class="icon-button"
+          >
+            <SvgDownloadFile />
+          </button>
+        </div>
+        <AppCodeBlock
+          :code="inaccessibleCode"
+          class="col-span-6 sm:col-span-4"
+        />
       </div>
       <p class="mt-4">
         The information a screen reader provides for this button will only consist of "button". Therefore, a screen reader user will have no idea what this button's purpose is, or what will happen if they click on it.
       </p>
     </div>
     <div>
-      <h3 class="my-4">
-        Button with an <code>aria-label</code> Attribute
+      <h3 class="page-tertiary-heading">
+        Accessible: Button with an <code>aria-label</code> Attribute
       </h3>
-      <div class="flex flex-col sm:flex-row items-center">
-        <button
-          type="button"
-          aria-label="Download file"
-          class="icon-button"
-        >
-          <SvgDownloadFile />
-        </button>
-        <code class="code-block">
-          <span>&lt;button type="button" aria-label="Download file"&gt;</span>
-          <br>
-          <span class="ml-3">&lt;svg /&gt;</span>
-          <br>
-          <span>&lt;/button&gt;</span>
-        </code>
+      <div class="grid grid-cols-6 gap-2 justify-items-center sm:justify-items-start items-center">
+        <div class="col-span-6 sm:col-span-1">
+          <button
+            type="button"
+            aria-label="Download file"
+            class="icon-button"
+          >
+            <SvgDownloadFile />
+          </button>
+        </div>
+        <AppCodeBlock
+          :code="accessibleCode"
+          class="col-span-6 sm:col-span-4"
+        />
       </div>
       <p class="mt-4">
         Since this button is given an <code>aria-label</code> attribute, it provides the accessible name of "Download file" to a screen reader. This lets a screen reader user know that clicking on this button will result in downloading a file.
@@ -60,12 +58,20 @@
 </template>
 
 <script type="text/babel">
+import AppCodeBlock from '@/components/global/AppCodeBlock'
 import SvgDownloadFile from '@/components/svg/SvgDownloadFile'
 
 export default {
   name: 'IconButtonsSection',
   components: {
+    AppCodeBlock,
     SvgDownloadFile,
+  },
+  data() {
+    return {
+      inaccessibleCode: `<button type="button">\n\t<svg />\n</button>`,
+      accessibleCode: `<button\n\ttype="button"\n\taria-label="Download file"\n>\n\t<svg />\n</button>`,
+    }
   },
 }
 </script>
