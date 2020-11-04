@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-900">
+  <div class="container mb-10 text-gray-600">
     <h1
       class="page-heading"
       v-text="'Button Tips'"
