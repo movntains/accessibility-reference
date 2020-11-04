@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-900">
+  <div class="container mb-10 text-gray-600">
     <h1
       class="page-heading"
       v-text="'Form Tips'"
@@ -10,6 +10,7 @@
 </template>
 
 <script type="text/babel">
+import CodeBlockMixin from '@/mixins/CodeBlockMixin'
 import FocusRingsSection from '@/components/sections/forms/FocusRingsSection'
 import FormLabelsSection from '@/components/sections/forms/FormLabelsSection'
 
@@ -19,5 +20,6 @@ export default {
     FocusRingsSection,
     FormLabelsSection,
   },
+  mixins: [CodeBlockMixin],
 }
 </script>
