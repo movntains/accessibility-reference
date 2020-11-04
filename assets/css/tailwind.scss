@@ -39,11 +39,18 @@ h3 {
 code {
   @apply
     .px-1
-    .bg-gray-300
+    .bg-gray-200
     .rounded-sm
+    .text-black
+  ;
+}
+
+p {
+  @apply
+    .leading-7
   ;
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1000px;
 }

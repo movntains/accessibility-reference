@@ -1,13 +1,16 @@
 .icon-button {
   @apply
     .p-3
-    .border .border-gray-600
+    .bg-white
+    .border .border-brand-blue
     .rounded-md
+    .text-brand-blue
   ;
 
   &:hover {
     @apply
-      .bg-gray-200
+      .bg-brand-blue
+      .text-white
     ;
   }
 
