@@ -27,7 +27,7 @@
       >
         <NuxtLink
           :to="{ name: link.to }"
-          class="text-brand-blue hover:underline focus:outline-none focus:shadow-outline"
+          class="desktop-nav__link"
           v-text="link.title"
         />
       </li>
