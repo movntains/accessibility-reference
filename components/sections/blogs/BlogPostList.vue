@@ -3,12 +3,13 @@
     <li
       v-for="(post, index) in posts"
       :key="`post-${index}`"
+      class="mb-6"
     >
       <a
         :href="post.link"
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-brand-blue hover:underline"
+        class="text-black hover:text-brand-blue hover:underline"
         v-text="post.title"
       />
     </li>
@@ -24,6 +25,10 @@ export default {
         {
           title: 'How Semantic HTML Improves the Accessibility of a Website',
           link: 'https://zaengle.com/blog/how-semantic-html-will-improve-the-accessibility-of-a-website',
+        },
+        {
+          title: '10 Foolproof Tips for Maximizing Website Accessibility',
+          link: 'https://zaengle.com/blog/10-foolproof-tips-for-maximizing-website-accessibility',
         },
       ],
     }
