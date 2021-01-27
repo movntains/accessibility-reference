@@ -62,10 +62,9 @@
                   :to="{ name: 'index' }"
                   class="app-navigation__heading"
                 >
-                  <SvgLogo />
-                  <span
-                    class="ml-3 mb-1 text-gray-200"
-                    v-text="'A11y Tips'"
+                  <SvgWordLogo
+                    class="w-48 h-24"
+                    text-color="#F8F9FB"
                   />
                 </NuxtLink>
               </div>
@@ -103,12 +102,12 @@
 
 <script type="text/babel">
 import { mapState, mapMutations } from 'vuex'
-import SvgLogo from '@/components/svg/SvgLogo'
+import SvgWordLogo from '@/components/svg/SvgWordLogo'
 
 export default {
   name: 'AppMobileNavigation',
   components: {
-    SvgLogo,
+    SvgWordLogo,
   },
   props: {
     links: {

@@ -1,41 +1,37 @@
 <template>
   <div
-    id="dashboard-desktop-nav"
-    class="flex flex-col w-64 bg-black"
+    class="w-screen mx-auto py-4 px-4 sm:px-6"
+    :class="{ 'flex justify-between border-b border-gray-100': !isLandingPage }"
   >
-    <div class="flex-1 flex flex-col pb-4 overflow-y-auto">
-      <div class="flex items-center flex-shrink-0 py-5 px-4">
-        <NuxtLink
-          :to="{ name: 'index' }"
-          class="app-navigation__heading"
-        >
-          <SvgLogo />
-          <span
-            class="ml-3 mb-1 text-gray-200"
-            v-text="'A11y Tips'"
-          />
-        </NuxtLink>
-      </div>
-      <nav
-        id="desktop-nav-items"
-        class="flex-1 mt-5 px-4 space-y-1"
+    <NuxtLink
+      v-if="!isLandingPage"
+      :to="{ name: 'index' }"
+      class="focus:outline-none focus:shadow-outline"
+    >
+      <SvgLogo class="w-10 h-10" />
+    </NuxtLink>
+    <ul
+      role="menu"
+      class="flex flex-col sm:flex-row justify-center items-center"
+    >
+      <li
+        v-if="isLandingPage"
+        class="mb-4 sm:mb-0 mr-0 sm:mr-6 font-semibold"
+        v-text="'Topics:'"
+      />
+      <li
+        v-for="link in links"
+        :key="link.to"
+        class="mb-4 sm:mb-0 mr-0 sm:mr-6"
+        role="menuitem"
       >
-        <ul role="menu">
-          <li
-            v-for="link in links"
-            :key="link.title"
-            class="my-2"
-            role="menuitem"
-          >
-            <NuxtLink
-              :to="{ name: link.to }"
-              class="group app-navigation__link"
-              v-text="link.title"
-            />
-          </li>
-        </ul>
-      </nav>
-    </div>
+        <NuxtLink
+          :to="{ name: link.to }"
+          class="text-brand-blue hover:underline focus:outline-none focus:shadow-outline"
+          v-text="link.title"
+        />
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -51,6 +47,11 @@ export default {
     links: {
       type: Array,
       required: true,
+    },
+  },
+  computed: {
+    isLandingPage() {
+      return this.$route.name === 'index'
     },
   },
 }
