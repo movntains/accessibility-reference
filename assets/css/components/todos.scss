@@ -1,0 +1,16 @@
+.todo-list__item {
+  @apply
+    .my-4
+    .py-4 .px-6
+    .bg-white
+    .rounded-sm
+    .shadow-sm
+    .cursor-move
+  ;
+
+  &:focus {
+    @apply
+      .outline-none .shadow-outline
+    ;
+  }
+}
