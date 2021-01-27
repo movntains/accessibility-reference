@@ -5,10 +5,17 @@
       v-text="'Accessible Drag-and-Drop'"
     />
     <p
-      class="mb-10"
+      class="mb-6"
       v-text="'This example is written in Vue, but the principles can be applied to any framework.'"
     />
-    <div>
+    <a
+      href="https://github.com/movntains/a11y-demo/tree/develop/components/sections/drag-drop"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-black hover:text-brand-blue underline"
+      v-text="'View the code for this example.'"
+    />
+    <div class="mt-10">
       <h2
         class="page-subheading"
         v-text="'Todo List'"
