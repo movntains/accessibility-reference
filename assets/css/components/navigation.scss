@@ -43,3 +43,28 @@
     ;
   }
 }
+
+.desktop-nav__link {
+  @apply
+    .font-medium .text-black
+  ;
+
+  &:hover {
+    @apply
+      .text-brand-blue
+    ;
+  }
+
+  &:focus {
+    @apply
+      .outline-none .shadow-outline
+    ;
+  }
+
+  &.nuxt-link-exact-active {
+    @apply
+      .pb-2 .text-brand-blue
+      .border-b .border-brand-blue
+    ;
+  }
+}
