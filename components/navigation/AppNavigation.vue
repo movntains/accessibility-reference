@@ -12,6 +12,7 @@
 </template>
 
 <script type="text/babel">
+import links from '@/services/nav-links'
 import AppMobileNavigation from '@/components/navigation/AppMobileNavigation'
 import AppDesktopNavigation from '@/components/navigation/AppDesktopNavigation'
 
@@ -23,20 +24,7 @@ export default {
   },
   data() {
     return {
-      navLinks: [
-        {
-          to: 'blogs',
-          title: 'Blog List',
-        },
-        {
-          to: 'buttons',
-          title: 'Buttons',
-        },
-        {
-          to: 'forms',
-          title: 'Forms',
-        },
-      ],
+      navLinks: links,
     }
   },
 }
