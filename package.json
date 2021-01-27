@@ -18,7 +18,8 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "prismjs": "^1.22.0",
-    "vue-prism-editor": "^1.2.2"
+    "vue-prism-editor": "^1.2.2",
+    "vuedraggable": "^2.24.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
