@@ -19,13 +19,6 @@ body {
   @apply
     .antialiased
   ;
-
-  &:not(.using-keyboard) a:focus,
-  &:not(.using-keyboard) button:focus {
-    @apply
-      .outline-none .shadow-none
-    ;
-  }
 }
 
 h1,
