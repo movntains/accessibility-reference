@@ -18,11 +18,11 @@
     <div class="mt-10">
       <h2
         class="page-subheading"
-        v-text="'Todo List'"
+        v-text="'To-do List'"
       />
       <p
         class="mb-4"
-        v-text="'These are some items in a todo list. You can drag and drop to reorder them to reflect what you want to complete first.'"
+        v-text="'These are some items in a to-do list. You can drag and drop to reorder them to reflect what you want to complete first.'"
       />
       <p
         class="mb-10 font-medium"
@@ -34,7 +34,6 @@
 </template>
 
 <script type="text/babel">
-import CodeBlockMixin from '@/mixins/CodeBlockMixin'
 import TodoList from '@/components/sections/drag-drop/TodoList'
 import AppSectionWrapper from '@/components/global/AppSectionWrapper'
 
@@ -44,6 +43,5 @@ export default {
     TodoList,
     AppSectionWrapper,
   },
-  mixins: [CodeBlockMixin],
 }
 </script>
