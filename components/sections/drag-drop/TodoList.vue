@@ -35,9 +35,9 @@
         :key="todo.id"
         :index="index"
         :todo-item="todo"
-        @itemGrabbed="handleItemGrabbed($event)"
-        @itemDropped="handleItemDropped($event)"
-        @moveItem="moveItem($event)"
+        @itemGrabbed="handleItemGrabbed"
+        @itemDropped="handleItemDropped"
+        @moveItem="moveItem"
       />
     </Draggable>
   </div>
