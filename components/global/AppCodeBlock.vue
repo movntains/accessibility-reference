@@ -9,13 +9,13 @@
 </template>
 
 <script type="text/babel">
+import 'prism-theme-night-owl'
 import { PrismEditor } from 'vue-prism-editor'
 import 'vue-prism-editor/dist/prismeditor.min.css'
 
 import { highlight, languages } from 'prismjs/components/prism-core'
 import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-markup'
-import 'prismjs/themes/prism-tomorrow.css'
 
 export default {
   name: 'AppCodeBlock',
