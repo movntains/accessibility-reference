@@ -1,60 +1,46 @@
 <template>
   <div>
-    <main class="max-w-screen-lg mt-10 sm:mt-12 md:mt-16 lg:mt-20 mx-auto px-4 sm:px-6">
-      <SvgWordLogo class="w-64 h-32 sm:w-auto sm:h-auto mx-auto mb-8" />
-      <div class="text-center">
-        <h2 class="mb-8 text-4xl sm:text-5xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none">
-          A free guide to
-          <br class="xl:hidden">
-          <span class="text-brand-blue">website accessibility</span>
-        </h2>
-        <p
-          class="mt-3 max-w-md mx-auto text-left sm:text-center text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
-          v-text="`Making a website accessible doesn't have to be hard. Browse tips and demos to learn how you can improve the accessibility of the sites you build.`"
-        />
+    <main>
+      <div class="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+        <div class="mx-auto max-w-7xl lg:px-8">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+            <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+              <div class="lg:py-24">
+                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                  <span
+                    class="block"
+                    v-text="'A free guide to'"
+                  />
+                  <span
+                    class="block text-cyan-600"
+                    v-text="'web accessibility'"
+                  />
+                </h1>
+                <p
+                  class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
+                  v-text="`Making a website accessible doesn't have to be hard. Browse tips and demos to learn how you can improve the accessibility of the sites you build.`"
+                />
+              </div>
+            </div>
+            <div class="mt-0 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+              <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                <SvgWebAccessibility class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
-    <div class="flex justify-center items-center w-screen my-10 py-6 banner">
-      <div class="flex flex-col sm:flex-row justify-center items-center">
-        <p
-          class="text-lg text-white font-semibold mb-8 sm:mr-8 sm:mb-0"
-          v-text="'Check out some accessibility blog posts.'"
-        />
-        <NuxtLink
-          :to="{ name: 'blogs' }"
-          class="px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-brand-blue bg-white shadow-lg focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:text-lg transform hover:scale-105 hover:shadow-xl"
-          v-text="'View Blog List'"
-        />
-      </div>
-    </div>
-    <div class="w-screen mt-10 mx-auto px-4 sm:px-6">
-      <AppDesktopNavigation :links="navLinks" />
-    </div>
   </div>
 </template>
 
 <script type="text/babel">
-import links from '@/services/nav-links'
-import SvgWordLogo from '@/components/svg/SvgWordLogo'
-import AppDesktopNavigation from '@/components/navigation/AppDesktopNavigation'
+import SvgWebAccessibility from '@/components/svg/illustrations/SvgWebAccessibility'
 
 export default {
   name: 'RootHero',
   components: {
-    SvgWordLogo,
-    AppDesktopNavigation,
-  },
-  data() {
-    return {
-      navLinks: links,
-    }
+    SvgWebAccessibility,
   },
 }
 </script>
-
-<style scoped>
-.banner {
-background-color: #6c72e1;
-background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23141dcf' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-}
-</style>
