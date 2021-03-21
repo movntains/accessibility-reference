@@ -118,6 +118,11 @@ export default {
     }
   },
   watch: {
+    '$route'(newVal) {
+      if (newVal) {
+        this.subNavIsOpen = false
+      }
+    },
     async subNavIsOpen(newVal) {
       if (newVal) {
         await this.$nextTick()
