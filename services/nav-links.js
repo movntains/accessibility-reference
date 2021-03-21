@@ -1,5 +1,13 @@
 export default [
   {
+    to: 'basics',
+    title: 'Basics',
+  },
+  {
+    to: 'tips',
+    title: 'Quick Tips',
+  },
+  {
     to: 'buttons',
     title: 'Buttons',
   },
@@ -8,7 +16,7 @@ export default [
     title: 'Forms',
   },
   {
-    to: 'drag-drop',
-    title: 'Drag-and-Drop',
+    to: 'resources',
+    title: 'Resources',
   },
 ]

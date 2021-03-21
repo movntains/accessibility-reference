@@ -7,6 +7,7 @@
 @import 'components/buttons.scss';
 @import 'components/headings.scss';
 @import 'components/navigation.scss';
+@import 'components/transitions.scss';
 
 @tailwind utilities;
 
@@ -47,4 +48,9 @@ p {
 
 .container {
   max-width: 1000px;
+}
+
+.gradient {
+  background: rgb(9,165,144);
+  background-image: linear-gradient(to right, rgba(9,165,144,1) 35%, rgba(11,132,162,1) 100%);
 }

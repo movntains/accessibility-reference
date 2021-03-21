@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="md:hidden h-full">
     <div
       class="fixed inset-0 flex z-40"
       :class="{ 'pointer-events-none': !mobileNavIsOpen }"
@@ -31,11 +31,11 @@
       >
         <div
           v-if="mobileNavIsOpen"
-          class="relative flex-1 flex flex-col max-w-xs w-full pb-4 bg-black"
+          class="relative flex-1 flex flex-col max-w-xs w-full pb-4 bg-white"
         >
           <div class="absolute top-0 right-0 -mr-14 p-1">
             <button
-              class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-black focus:shadow-outline"
+              class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:shadow-outline-indigo"
               aria-label="Close navigation"
               @click="toggleMobileNav"
               @keydown.enter.prevent="toggleMobileNav"
@@ -57,15 +57,12 @@
           </div>
           <div class="flex-1 h-0 overflow-y-auto">
             <nav>
-              <div class="flex items-center flex-shrink-0 py-5 px-4">
+              <div class="flex items-center flex-shrink-0 py-5 pl-5 pr-4">
                 <NuxtLink
                   :to="{ name: 'index' }"
                   class="app-navigation__heading"
                 >
-                  <SvgWordLogo
-                    class="w-48 h-24"
-                    text-color="#F8F9FB"
-                  />
+                  <SvgLogo class="w-auto h-10" />
                 </NuxtLink>
               </div>
               <ul
@@ -75,9 +72,22 @@
                 @keydown.esc="toggleMobileNav"
               >
                 <li
+                  v-for="javascriptLink in javascriptLinks"
+                  :key="javascriptLink.title"
+                  class="my-2"
+                  role="menuitem"
+                >
+                  <NuxtLink
+                    :to="{ name: javascriptLink.to }"
+                    class="group app-navigation__link my-2"
+                    v-text="javascriptLink.title"
+                  />
+                </li>
+                <li
                   v-for="link in links"
                   :key="link.title"
                   class="my-2"
+                  role="menuitem"
                 >
                   <NuxtLink
                     :to="{ name: link.to }"
@@ -102,12 +112,12 @@
 
 <script type="text/babel">
 import { mapState, mapMutations } from 'vuex'
-import SvgWordLogo from '@/components/svg/SvgWordLogo'
+import SvgLogo from '@/components/svg/SvgLogo'
 
 export default {
   name: 'AppMobileNavigation',
   components: {
-    SvgWordLogo,
+    SvgLogo,
   },
   props: {
     links: {
@@ -118,6 +128,12 @@ export default {
   data() {
     return {
       listItems: [],
+      javascriptLinks: [
+        {
+          to: 'drag-drop',
+          title: 'Drag-and-Drop',
+        },
+      ],
     }
   },
   computed: {
