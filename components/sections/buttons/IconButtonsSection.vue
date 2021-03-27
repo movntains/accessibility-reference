@@ -1,20 +1,22 @@
 <template>
-  <section>
-    <h2 class="page-subheading">
-      Give Icon Buttons an <code>aria-label</code> Attribute
-    </h2>
-    <p class="mb-4">
+  <section class="mt-16">
+    <h2
+      class="page-subheading"
+      v-text="'Give Icon Buttons an ARIA Label'"
+    />
+    <p class="my-6">
       Since a <code>&lt;button&gt;</code> element always attempts to compute its accessible name using its text content, buttons that don't have text content need an <code>aria-label</code> attribute. The value of this attribute will provide an accessible name to assistive technologies.
     </p>
-    <p>
+    <p class="mb-6">
       Icon buttons are a perfect example of buttons than need to be given an <code>aria-label</code> attribute.
     </p>
     <div class="my-8">
-      <h3 class="page-tertiary-heading">
-        Inaccessible: Button Without an <code>aria-label</code> Attribute
-      </h3>
+      <h3
+        class="page-tertiary-heading"
+        v-text="'Inaccessible: Button Without an ARIA Label'"
+      />
       <div class="grid grid-cols-6 gap-2 justify-items-center sm:justify-items-start items-center">
-        <div class="col-span-6 sm:col-span-1">
+        <div class="col-span-6 sm:col-span-1 mb-4 sm:mb-0">
           <button
             type="button"
             class="icon-button"
@@ -24,19 +26,20 @@
         </div>
         <AppCodeBlock
           :code="inaccessibleCode"
-          class="col-span-6 sm:col-span-4"
+          class="col-span-6 sm:col-span-5"
         />
       </div>
       <p class="mt-4">
-        The information a screen reader provides for this button will only consist of "button". Therefore, a screen reader user will have no idea what this button's purpose is, or what will happen if they click on it.
+        The only thing that a screen reader will announce for this button will be the word "button". Therefore, a screen reader user will have no idea what this button's purpose is, or what will happen if they interact with it.
       </p>
     </div>
-    <div>
-      <h3 class="page-tertiary-heading">
-        Accessible: Button with an <code>aria-label</code> Attribute
-      </h3>
+    <div class="my-8">
+      <h3
+        class="page-tertiary-heading"
+        v-text="'Accessible: Button with an ARIA Label'"
+      />
       <div class="grid grid-cols-6 gap-2 justify-items-center sm:justify-items-start items-center">
-        <div class="col-span-6 sm:col-span-1">
+        <div class="col-span-6 sm:col-span-1 mb-4 sm:mb-0">
           <button
             type="button"
             aria-label="Download file"
@@ -47,11 +50,18 @@
         </div>
         <AppCodeBlock
           :code="accessibleCode"
-          class="col-span-6 sm:col-span-4"
+          class="col-span-6 sm:col-span-5"
         />
       </div>
-      <p class="mt-4">
-        Since this button is given an <code>aria-label</code> attribute, it provides the accessible name of "Download file" to a screen reader. This lets a screen reader user know that clicking on this button will result in downloading a file.
+      <p class="my-4">
+        Since this button is given an <code>aria-label</code> attribute, it provides the accessible name of "Download file" to a screen reader. This lets a screen reader user know that interacting with this button will result in downloading a file.
+      </p>
+      <p>
+        <span
+          class="font-semibold"
+          v-text="'Note:'"
+        />
+        If this is a button that's going to be repeated (e.g., it'll be in every row of a table), then it's important to give the ARIA label a more specific name, such as <code>aria-label="Download file &lt;file_name&gt;"</code>, where <code>&lt;file_name&gt;</code> is the name of the file (which would most likely come from a prop).
       </p>
     </div>
   </section>
