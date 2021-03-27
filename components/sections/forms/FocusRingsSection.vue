@@ -1,14 +1,13 @@
 <template>
-  <section>
+  <section class="mt-16">
     <h2
       class="page-subheading"
-      v-text="`Don't Remove Focus Rings`"
+      v-text="`Don't Remove Focus Indicators`"
     />
     <p
-      class="mb-4"
-      v-text="`Focus rings act as the stand-in for a mouse pointer for keyboard-only users, so they should never be removed with CSS. Instead, they should be styled so that they match the site design.`"
+      class="my-6"
+      v-text="`Focus indicators act as the stand-in for a mouse pointer for keyboard-only users, so they should never be removed with CSS. Instead, they should be styled so that they match the site design. You'll also need to ensure that there's adequate contrast between the focus indicator and the background.`"
     />
-    <p v-text="`It's also possible to use JavaScript to hide focus rings when the user is using a mouse or trackpad, but display them when the user is using the keyboard.`" />
     <div class="my-8">
       <h3
         class="page-tertiary-heading"
@@ -16,10 +15,10 @@
       />
       <div class="grid grid-cols-6 gap-2 items-center">
         <div class="col-span-6 sm:col-span-3">
-          <div class="flex flex-col mb-4">
+          <div class="flex flex-col mb-6">
             <label
               for="username"
-              class="font-medium"
+              class="mb-2 font-medium"
               v-text="'Username'"
             />
             <input
@@ -31,7 +30,7 @@
           <div class="flex flex-col">
             <label
               for="password"
-              class="font-medium"
+              class="mb-2 font-medium"
               v-text="'Password'"
             />
             <input
@@ -43,7 +42,7 @@
         </div>
       </div>
       <p
-        class="mt-4"
+        class="my-4"
         v-text="`Without focus rings, the only way to tell which of these form elements is currently focused is to look for the cursor.`"
       />
     </div>
@@ -57,32 +56,32 @@
           <div class="flex flex-col mb-4">
             <label
               for="username_accessible"
-              class="font-medium"
+              class="mb-2 font-medium"
               v-text="'Username'"
             />
             <input
               id="username_accessible"
               type="text"
-              class="form-input bg-white"
+              class="form-input bg-white focus:shadow-outline-teal focus:border-teal-700"
             >
           </div>
           <div class="flex flex-col">
             <label
               for="password_accessible"
-              class="font-medium"
+              class="mb-2 font-medium"
               v-text="'Password'"
             />
             <input
               id="password_accessible"
               type="password"
-              class="form-input bg-white"
+              class="form-input bg-white focus:shadow-outline-teal focus:border-teal-700"
             >
           </div>
         </div>
       </div>
       <p
         class="mt-4"
-        v-text="'With focus rings, the currently focused form element is much easier to distinguish.'"
+        v-text="`When using focus indicators, it's much easier to determine which form element is currently focused.`"
       />
     </div>
   </section>
