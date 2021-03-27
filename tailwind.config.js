@@ -34,16 +34,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        mono: [...defaultTheme.fontFamily.mono],
       },
       colors: {
         black: '#282B2C',
-        'brand-teal': '#004970',
-        'brand-blue': '#4876D6',
-        'brand-green': '#25e8ca',
-        'brand-green-dark': '#538579',
-        'grey-light': '#EAEDEE',
-        'grey-extra-light': '#F8F9FB',
-        'grey-dark': '#323539',
         cyan: {
           50: '#ebfeff',
           100: '#dbfcff',
@@ -59,6 +53,7 @@ module.exports = {
       },
       boxShadow: {
         'outline-teal': '0 0 0 3px rgba(22, 78, 100, 0.45)',
+        'inner-outline-teal': 'inset 0 0 0 3px rgba(22, 78, 100, 0.45)',
       },
     },
   },
