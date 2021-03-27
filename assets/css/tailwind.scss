@@ -33,10 +33,10 @@ h3 {
 
 code {
   @apply
-    .px-1
-    .bg-gray-200
-    .rounded-sm
-    .text-black
+    .p-1
+    .bg-teal-50
+    .rounded
+    .font-mono .text-sm .text-cyan-700
   ;
 }
 
@@ -53,4 +53,23 @@ p {
 .gradient {
   background: rgb(9,165,144);
   background-image: linear-gradient(to right, rgba(9,165,144,1) 35%, rgba(11,132,162,1) 100%);
+}
+
+.skip-link {
+  top: -40px;
+  z-index: 100;
+
+  @apply
+    .absolute .left-0
+    .p-2
+    .bg-teal-100
+    .text-teal-800
+  ;
+
+  &:focus {
+    @apply
+      .top-0
+      .outline-none .shadow-inner-outline-teal
+    ;
+  }
 }
