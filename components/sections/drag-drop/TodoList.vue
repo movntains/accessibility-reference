@@ -1,9 +1,9 @@
 <template>
-  <div class="p-4 bg-gray-100 shadow-inner rounded-sm">
+  <div class="p-4 bg-gray-50 shadow-inner rounded-sm">
     <div class="mb-6">
       <button
         type="button"
-        class="text-sm underline focus:outline-none focus:shadow-outline"
+        class="text-sm underline focus:outline-none focus:shadow-outline-teal"
         @click="showKeyboardInstructions = !showKeyboardInstructions"
         @keydown.enter.prevent="showKeyboardInstructions = !showKeyboardInstructions"
         v-text="keyboardInstructionsButtonText"
