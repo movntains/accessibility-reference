@@ -29,7 +29,6 @@ export default {
   },
   mounted() {
     window.addEventListener('resize', this.onResize)
-    window.addEventListener('keydown', this.onFirstTab)
 
     this.setWindowWidth(window.innerWidth)
   },
@@ -43,13 +42,6 @@ export default {
     }),
     onResize(event) {
       this.setWindowWidth(event.target.innerWidth)
-    },
-    onFirstTab(event) {
-      if (event.keyCode === 9) {
-        document.body.classList.add('using-keyboard')
-
-        window.removeEventListener('keydown', this.onFirstTab)
-      }
     },
   },
 }

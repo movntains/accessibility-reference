@@ -9,7 +9,7 @@ import RootHero from '@/components/sections/root/RootHero'
 
 export default {
   name: 'IndexPage',
-  layout: 'landing',
+  layout: 'default',
   components: {
     RootHero,
   },

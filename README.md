@@ -1,3 +1,6 @@
-# Accessibility Tips Demo
+<div align="center">
+	<img src="./static/favicon.svg" height="50">
+  <h1>Accessibility Reference</h1>
+</div>
 
-This repo contains the code for a demo site that will be a companion to a blog post on accessibility tips.
+This repo contains the code for [Accessibility Reference](www.accessibilityreference.com/).

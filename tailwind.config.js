@@ -34,15 +34,26 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        mono: [...defaultTheme.fontFamily.mono],
       },
       colors: {
         black: '#282B2C',
-        'brand-blue': '#141dcf',
-        'brand-green': '#25e8ca',
-        'brand-green-dark': '#538579',
-        'grey-light': '#EAEDEE',
-        'grey-extra-light': '#F8F9FB',
-        'grey-dark': '#323539',
+        cyan: {
+          50: '#ebfeff',
+          100: '#dbfcff',
+          200: '#a4f5fe',
+          300: '#4be4fb',
+          400: '#06c8ea',
+          500: '#06a3c6',
+          600: '#0b84a2',
+          700: '#0f6580',
+          800: '#12576e',
+          900: '#164e64',
+        },
+      },
+      boxShadow: {
+        'outline-teal': '0 0 0 3px rgba(22, 78, 100, 0.45)',
+        'inner-outline-teal': 'inset 0 0 0 3px rgba(22, 78, 100, 0.45)',
       },
     },
   },
