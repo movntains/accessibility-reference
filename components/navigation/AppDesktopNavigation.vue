@@ -23,7 +23,7 @@
 </template>
 
 <script type="text/babel">
-import AppSubnavigation from '@/components/navigation/AppSubnavigation'
+import AppSubnavigation from '@/components/navigation/AppSubNavigation'
 
 export default {
   name: 'AppDesktopNavigation',
