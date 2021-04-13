@@ -8,8 +8,11 @@ export default {
     title: 'Accessibility Reference',
     meta: [
       { charset: 'utf-8' },
+      { httpEquiv: 'Content-Type', content: 'text/html;charset=UTF-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { property: 'og:site_name', content: 'Accessibility Reference', key: 'ogsitename' },
       { hid: 'description', name: 'description', content: 'Tips and tricks for making accessible websites and web apps' },
+      { property: 'og:description', content: 'Tips and tricks for making accessible websites and web apps', key: 'ogdesc' },
     ],
     link: [
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
