@@ -1,5 +1,5 @@
 <template>
-  <nav class="hidden md:flex">
+  <nav class="hidden lg:flex">
     <ul
       role="menu"
       class="flex justify-between items-center space-x-10"

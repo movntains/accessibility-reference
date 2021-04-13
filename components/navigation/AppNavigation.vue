@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="relative">
-      <div class="flex justify-between md:justify-start items-center max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 md:space-x-10">
+      <div class="flex justify-between lg:justify-start items-center max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 lg:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <NuxtLink
             :to="{ name: 'index' }"

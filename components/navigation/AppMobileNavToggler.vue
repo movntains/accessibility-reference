@@ -1,5 +1,5 @@
 <template>
-  <div class="-mr-2 -my-2 md:hidden">
+  <div class="-mr-2 -my-2 lg:hidden">
     <button
       id="show-mobile-nav"
       type="button"
