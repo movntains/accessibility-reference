@@ -1,29 +1,21 @@
 <template>
   <AppSectionWrapper>
     <h1
-      class="page-heading text-center"
+      class="page-heading"
       v-text="'Quick Tips for Web Accessibility'"
     />
-    <div class="max-w-7xl">
-      <div class="flex flex-col items-center mb-8">
-        <h2
-          class="page-subheading"
-          v-text="'Coming soon!'"
-        />
-        <SvgComingSoon class="w-full h-96 mt-6 mx-auto" />
-      </div>
-    </div>
+    <TipsList />
   </AppSectionWrapper>
 </template>
 
 <script type="text/babel">
+import TipsList from '@/components/sections/tips/TipsList'
 import AppSectionWrapper from '@/components/global/AppSectionWrapper'
-import SvgComingSoon from '@/components/svg/illustrations/SvgComingSoon'
 
 export default {
   name: 'TipsPage',
   components: {
-    SvgComingSoon,
+    TipsList,
     AppSectionWrapper,
   },
   head() {
