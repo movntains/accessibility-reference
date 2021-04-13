@@ -28,16 +28,6 @@ module.exports = {
         SwitchCase: 1,
       },
     ],
-    'vue/max-attributes-per-line': [
-      'warn',
-      {
-        singleline: 1,
-        multiline: {
-          max: 1,
-          allowFirstLine: false,
-        },
-      },
-    ],
     quotes: [
       'warn',
       'single',
@@ -54,5 +44,16 @@ module.exports = {
         asyncArrow: 'always',
       },
     ],
+    'vue/max-attributes-per-line': [
+      'warn',
+      {
+        singleline: 1,
+        multiline: {
+          max: 1,
+          allowFirstLine: false,
+        },
+      },
+    ],
+    'vue/no-v-html': 'off',
   },
 }
