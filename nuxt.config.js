@@ -29,8 +29,9 @@ export default {
   components: true,
 
   buildModules: [
-    '@nuxtjs/eslint-module',
+    '@nuxtjs/gtm',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/eslint-module',
   ],
 
   modules: [],
@@ -43,6 +44,23 @@ export default {
     families: {
       Inter: true,
     },
+  },
+
+  gtm: {
+    enabled: true,
+    id: 'GTM-MDDVM6H',
+    layer: 'dataLayer',
+    variables: {},
+    pageTracking: true,
+    pageViewEventName: 'nuxtRoute',
+    autoInit: false,
+    respectDoNotTrack: true,
+    scriptId: 'gtm-script',
+    scriptDefer: false,
+    scriptURL: 'https://www.googletagmanager.com/gtm.js',
+    noscript: true,
+    noscriptId: 'gtm-noscript',
+    noscriptURL: 'https://www.googletagmanager.com/ns.html',
   },
 
   build: {},
