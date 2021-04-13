@@ -1,5 +1,5 @@
 <template>
-  <div class="md:hidden h-full">
+  <div class="lg:hidden h-full">
     <div
       class="fixed inset-0 flex z-40"
       :class="{ 'pointer-events-none': !mobileNavIsOpen }"
